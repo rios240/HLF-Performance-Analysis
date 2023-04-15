@@ -1,6 +1,6 @@
 # HLF-Performance-Analysis
 
-_Authors_: [Tyler Rios](https://github.com/rios240), [Grant Sinclair](https://github.com/Grant-Sinclair), [Chloe Burke](https://github.com/cburke10), [Stew Fraser](https://github.com/i0a0i)_
+_Authors_: [Tyler Rios](https://github.com/rios240), [Grant Sinclair](https://github.com/Grant-Sinclair), [Chloe Burke](https://github.com/cburke10), [Stew Fraser](https://github.com/i0a0i)
 
 ## Description
 This project aims to demonstrate Hyperledger Fabric, a platform for distributed ledger solutions as well as utilize Hyperledger Caliper to performe benchmarks on the Fabric network.
