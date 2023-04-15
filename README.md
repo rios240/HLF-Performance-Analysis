@@ -15,6 +15,5 @@ _Best results for this project can be achieved by using a Linux virtual machine 
   - This repository uses docker cli and docker-compose to create and run the containers necessary for the Fabric Network so you must install Docker on your environment.
 3. Install Hyperledger Fabric docker images.
   - The Fabric binaries, samples, and cli are already included in this repository so all that is left is installing the proper Fabric images.
-  - Clone this repository to a directroy of your choice and run the following command to download and install the latest Fabric images: 
-   curl -sSL https://bit.ly/2ysbOFE | bash -s -- -s -b
+  - Clone this repository to a directroy of your choice and run the following command to download and install the latest Fabric images: curl -sSL https://bit.ly/2ysbOFE    | bash -s -- -s -b
    
