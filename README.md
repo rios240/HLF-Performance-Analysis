@@ -1,13 +1,13 @@
 # HLF-Performance-Analysis
 
-_Authors_: [Tyler Rios](https://github.com/rios240), [Grant Sinclair](https://github.com/Grant-Sinclair), [Chloe Burke](https://github.com/cburke10), [Stew Fraser](https://github.com/i0a0i)
+_Authors_: [Tyler Rios](https://github.com/rios240), [Grant Sinclair](https://github.com/Grant-Sinclair), [Chloe Burke](https://github.com/cburke10), [Stew Fraser](https://github.com/i0a0i)_
 
-##Description
+## Description
 This project aims to demonstrate Hyperledger Fabric, a platform for distributed ledger solutions as well as utilize Hyperledger Caliper to performe benchmarks on the Fabric network.
 
-##Environment Setup
+## Environment Setup
 
-_Best results for this project can be achieved by using a Linux virtual machine and having the lastest Hyperledger Fabric images installed.
+_Best results for this project can be achieved by using a Linux virtual machine and having the lastest Hyperledger Fabric images installed._
 
 1. Set up a Linux virtual machine (VM).
   - Download and install a virtualization software (i.e. VitualBox, VMWare, QEMU, Winodws WSL, etc.) and set up a Linux distrobution. Recommendaed options are Debian,      Ubuntu, or Fedora.
