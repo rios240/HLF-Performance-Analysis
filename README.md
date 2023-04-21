@@ -16,3 +16,11 @@ _Best results for this project can be achieved by using a Linux virtual machine 
 3. Install Hyperledger Fabric docker images.
     - The Fabric binaries, samples, and cli are already included in this repository so all that is left is installing the proper Fabric images.
     - Clone this repository to a directroy of your choice and run the following command to download and install the latest Fabric images: curl -sSL                             https://bit.ly/2ysbOFE | bash -s -- -s -b
+4. Set environment variables.
+    - View the README-FIRST file and follow the steps there to set $PATH, $FABRIC_CFG_PATH, and organization environment variables.
+
+## Running the Fabric test network
+
+1. Change into the benchmarks directory/api directory and run ./startFabric.sh. This will start the test network consisting of a single channel, an orderer node, and      two peer nodes linked to separate organizations.
+
+2. Follow the instructions in the output of startFabric.sh to use the test application and add orders to the ledger. 
