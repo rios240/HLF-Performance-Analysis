@@ -7,10 +7,11 @@ pushd ../../test-network
 popd
 
 cat <<EOF
+
+
 Total setup execution time : $(($(date +%s) - starttime)) secs ...
-Next, use the BlockchainIndexing applications to interact with the deployed BlockchainIndexing contract.
-The BlockchainIndexing applications are available in multiple programming languages.
-Follow the instructions for the programming language of your choice:
+Next, use the test applications to interact with the deployed Order contract.
+The test applications are available in javascript only:
 JavaScript:
     
     Start by changing into the "test" directory:
@@ -27,5 +28,6 @@ JavaScript:
 
     Now you can run the client applications i.e.
         node create-order-1000
+
 
 EOF
