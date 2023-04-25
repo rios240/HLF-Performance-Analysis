@@ -1,0 +1,1 @@
+npx caliper launch manager --caliper-bind-sut fabric:2.4 --caliper-workspace ./ --caliper-networkconfig ../test-network/test-network.yaml  --caliper-benchconfig config.yaml --caliper-flow-only-test --caliper-fabric-gateway-enabled

@@ -2,7 +2,7 @@ rm -rf test/wallet/*
 
 pushd ../../test-network
 ./network.sh down
-./network.sh up createChannel -ca
+./network.sh up createChannel -ca -s couchdb
 ./network.sh deployCC -ccn orderContract -ccv 1 -cci initLedger -ccl javascript -ccp ../benchmarks/chaincode/order
 popd
 
