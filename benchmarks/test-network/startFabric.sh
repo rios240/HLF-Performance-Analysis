@@ -6,6 +6,11 @@ pushd ../../test-network
 ./network.sh deployCC -ccn orderContract -ccv 1 -cci initLedger -ccl javascript -ccp ../benchmarks/chaincode/order
 popd
 
+pushd ../../test-network/prometheus-grafana
+docker-compose up -d
+popd
+
+
 cat <<EOF
 
 

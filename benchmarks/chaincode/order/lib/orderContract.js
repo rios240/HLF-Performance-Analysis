@@ -18,9 +18,10 @@ class Order extends Contract {
         const orderKey = L_ORDERKEY.toString()
         const orderPackage = {
             docType: 'order',
+            L_ORDERKEY: L_ORDERKEY,
             ...orderFields
         }
-        console.info('orderKey: ', orderKey);
+        console.info('Appending Order: \n', orderPackage);
 
         await ctx.stub.putState(orderKey, Buffer.from(JSON.stringify(orderPackage)))
 
