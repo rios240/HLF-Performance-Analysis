@@ -20,19 +20,11 @@ class Workload extends WorkloadModuleBase {
      */
     async submitTransaction() {
         this.txIndex++
-        var newOrder = {
-            L_ORDERKEY: this.txIndex,
-            L_PARTKEY: Math.floor(Math.random() * 1000) + 1,
-            L_SUPPKEY: Math.floor(Math.random() * 1000) + 1,
-            L_LINENUMBER: Math.floor(Math.random() * 100) + 1,
-            L_QUANTITY: Math.floor(Math.random() * 100) + 1
-          }
-
         let args = {
             contractId: 'orderContract',
             contractVersion: 'v1',
-            contractFunction: 'addOrder',
-            contractArguments: [JSON.stringify(newOrder)],
+            contractFunction: 'queryOrder',
+            contractArguments: [txIndex.toString(10)],
             timeout: 30
         }
 
