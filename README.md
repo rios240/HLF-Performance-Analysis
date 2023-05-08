@@ -33,4 +33,5 @@ _Best results for this project can be achieved by using a Linux virtual machine 
     - This will install Hyperledger Caliper.
 2. Change back into the test-network directory. To run a caliper benchmark you must specifiy which benchmark configuration to use. 
     - Using a code editor of your choice, view the code for runCaliper.sh which consists of just one line. Where you see the --caliper-benchconfig option change the yaml       file to the one of you choice. The benchmark configuration yaml files are located in benchmarks/api.
+4. Inside network-config.yaml there will be a ClientPrivateKey field with a path specified. Trace that path and copy the name of the file inside the keystore directory and add it to the ClientPrivateKey path.
 3. Now run ./runCaliper.sh to start caliper and run a benchmark on the Fabric network. Once caliper finishes, a report.html file will be generated in the benchmarks            directory for you to open in a browser. 
