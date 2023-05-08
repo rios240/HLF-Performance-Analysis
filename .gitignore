@@ -16,6 +16,7 @@ node_modules/
 # Ignore Gradle build output directory
 build
 package-lock.json
+report.html
 
 # Eclipse
 .classpath

@@ -1,2 +1,0 @@
-node enrollAdmin
-node registerUser
