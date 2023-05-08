@@ -21,7 +21,7 @@ _Best results for this project can be achieved by using a Linux virtual machine 
 5. Set environment variables.
     - View the README-FIRST file and follow the steps there to set the $PATH, $FABRIC_CFG_PATH, and organization environment variables.
 
-## Running the Fabric test network
+## Running Fabric
 
 1. Change into the benchmarks/test-network directory and run ./startFabric.sh. This will start the test network consisting of a single channel, an orderer node, and two        peer nodes linked to separate organizations. It will also bring up the prometheus and grafana monitoring nodes. The command will also output instructions for running a      test application.
 
