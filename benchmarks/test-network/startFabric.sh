@@ -20,7 +20,7 @@ The test applications are available in javascript only:
 JavaScript:
     
     Start by changing into the "test" directory:
-        cd test
+        cd ../api/test
     
     Next, install required packages:
         npm install
