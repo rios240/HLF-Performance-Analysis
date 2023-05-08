@@ -15,7 +15,7 @@ test:
           sampleInterval: 30
           includeFailed: true
       workload:
-        module: ../api/workloads/add-order.js
+        module: api/workloads/add-order.js
     - label: "200"
       description: Add 200 orders.
       txNumber: 200
@@ -27,7 +27,7 @@ test:
           sampleInterval: 30
           includeFailed: true
       workload:
-        module: ../api/workloads/add-order.js
+        module: api/workloads/add-order.js
     - label: "500"
       description: Add 500 orders.
       txNumber: 500
@@ -39,7 +39,7 @@ test:
           sampleInterval: 30
           includeFailed: true
       workload:
-        module: ../api/workloads/add-order.js
+        module: api/workloads/add-order.js
     - label: "1000"
       description: Add 1000 orders.
       txNumber: 1000
@@ -51,7 +51,7 @@ test:
           sampleInterval: 30
           includeFailed: true
       workload:
-        module: ../api/workloads/add-order.js
+        module: api/workloads/add-order.js
 monitors:
   resource:
   - module: docker
@@ -67,7 +67,7 @@ monitors:
           include: [dev-.*, couch, peer, orderer]
           queries:
               - name: Endorse Time (s)
-                query: rate(endorser_propsal_duration_sum{chaincode="marbles:v0"}[1m])/rate(endorser_propsal_duration_count{chaincode="marbles:v0"}[1m])
+                query: rate(endorser_propsal_duration_sum{chaincode="orderContract"}[1m])/rate(endorser_propsal_duration_count{chaincode="orderContract"}[1m])
                 step: 1
                 label: instance
                 statistic: avg
