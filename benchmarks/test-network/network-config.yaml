@@ -18,9 +18,11 @@ organizations:
       certificates:
       - name: 'User1'
         clientPrivateKey:
-          path: '../../test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/e2cd3c7d4ce24f4f31a54b509daec125d253062249c2c612fe21d56de5f37a85_sk'
+          path: '../test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/6a31b29ffa0c6d0d23ef79984ee8a95f46aaa4457f3561b7e034e6caeecc4526_sk'
         clientSignedCert:
-          path: '../../test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/cert.pem'
+          path: '../test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/cert.pem'
     connectionProfile:
-      path: '../../test-network/organizations/peerOrganizations/org1.example.com/connection-org1.yaml'
+      path: '../test-network/organizations/peerOrganizations/org1.example.com/connection-org1.yaml'
       discover: true
+
+

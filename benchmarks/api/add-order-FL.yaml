@@ -1,0 +1,83 @@
+test:
+  name: fabric-add-orders-fixed-load
+  description: Add orders with a fixed load.
+  workers:
+    number: 20
+  rounds:
+    - label: "10000"
+      description: Add 10000 orders.
+      txNumber: 10000
+      rateControl:
+        type: fixed-load
+        opts:
+          startingTps: 500
+          transactionLoad: 1000
+      workload:
+        module: api/workloads/add-order.js
+    - label: "50000"
+      description: Add 50000 orders.
+      txNumber: 50000
+      rateControl:
+        type: fixed-load
+        opts:
+          startingTps: 500
+          transactionLoad: 1000
+      workload:
+        module: api/workloads/add-order.js
+    - label: "100000"
+      description: Add 100000 orders.
+      txNumber: 100000
+      rateControl:
+        type: fixed-load
+        opts:
+          startingTps: 500
+          transactionLoad: 1000
+      workload:
+        module: api/workloads/add-order.js
+    - label: "500000"
+      description: Add 500000 orders.
+      txNumber: 500000
+      rateControl:
+        type: fixed-load
+        opts:
+          startingTps: 500
+          transactionLoad: 1000
+      workload:
+        module: api/workloads/add-order.js
+    - label: "1000000"
+      description: Add 1000000 orders.
+      txNumber: 1000000
+      rateControl:
+        type: fixed-load
+        opts:
+          startingTps: 500
+          transactionLoad: 1000
+      workload:
+        module: api/workloads/add-order.js
+monitors:
+  resource:
+  - module: docker
+    type: docker
+    options:
+      interval: 5
+      cpuUsageNormalization: true
+      containers:
+      - all
+  - module: prometheus
+    type: prometheus
+    options:
+      url: "http://localhost:9090"
+      metrics:
+          include: [dev-.*, couch, peer, orderer]
+          queries:
+              - name: Endorse Time (s)
+                query: rate(endorser_propsal_duration_sum{chaincode="orderContract"}[1m])/rate(endorser_propsal_duration_count{chaincode="orderContract"}[1m])
+                step: 1
+                label: instance
+                statistic: avg
+              - name: Max Memory (MB)
+                query: sum(container_memory_rss{name=~".+"}) by (name)
+                step: 10
+                label: name
+                statistic: max
+                multiplier: 0.000001
